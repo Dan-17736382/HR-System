@@ -52,7 +52,7 @@ class Application:
         
         # lsepi link
         link1 = Label(self.window, text="View LSEPI document", fg="blue", cursor="hand2")
-        link1.bind("<Button-1>", lambda: callback("https://github.com/Dan-17736382/HR-System/blob/main/Team1/lsepi.pdf"))
+        link1.bind("<Button-1>", lambda e: callback("https://github.com/Dan-17736382/HR-System/blob/main/Team1/lsepi.pdf"))
         link1.grid(row=4, column=0, columnspan=2, pady=5)
 
         # submit button
