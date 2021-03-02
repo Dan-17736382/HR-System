@@ -2,9 +2,6 @@ from tkinter import *
 from tkinter import ttk
 import sqlite3
 import webbrowser
-
-def callback(url):
-    webbrowser.open_new(url)
         
 class Application:
     def __init__(self) :
@@ -52,7 +49,7 @@ class Application:
         
         # lsepi link
         link1 = Label(self.window, text="View LSEPI document", fg="blue", cursor="hand2")
-        link1.bind("<Button-1>", lambda e: callback("https://github.com/Dan-17736382/HR-System/blob/main/Team1/lsepi.pdf"))
+        link1.bind("<Button-1>", lambda e: webbrowser.open_new("https://github.com/Dan-17736382/HR-System/blob/main/Team1/lsepi.pdf"))
         link1.grid(row=4, column=0, columnspan=2, pady=5)
 
         # submit button
@@ -66,6 +63,7 @@ class Application:
                     full_name text,
                     date_of_birth text
                     )""")
+
 
     def exit(self) :
         # close the database connection
